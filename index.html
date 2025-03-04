@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiran VVN | Portfolio</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background: #f7f7f7;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #2c3e50;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+      font-size: 2.5em;
+    }
+    nav ul {
+      list-style: none;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+      color: #3498db;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 30px auto;
+    }
+    .section {
+      margin-bottom: 60px;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+      color: #2c3e50;
+    }
+    /* Project Cards */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 20px;
+    }
+    .project-card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    .project-card h3 {
+      margin-bottom: 10px;
+      font-size: 1.5em;
+      color: #2c3e50;
+    }
+    .project-card p {
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+    .project-card a {
+      display: inline-block;
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .project-card a:hover {
+      color: #1abc9c;
+    }
+    /* About and Contact */
+    .about, .contact {
+      text-align: center;
+      font-size: 1.1em;
+    }
+    .contact a {
+      color: #3498db;
+      text-decoration: none;
+    }
+    .contact a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9em;
+    }
+    /* Resume Expandable Section */
+    .resume-card {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 20px;
+      display: none; /* Initially hidden */
+      text-align: left;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .toggle-btn {
+      cursor: pointer;
+      color: #3498db;
+      text-decoration: underline;
+      margin-top: 15px;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function toggleResume() {
+      var x = document.getElementById("resumeContent");
+      if (x.style.display === "none" || x.style.display === "") {
+        x.style.display = "block";
+        document.getElementById("toggleResumeBtn").innerText = "Hide Resume";
+      } else {
+        x.style.display = "none";
+        document.getElementById("toggleResumeBtn").innerText = "Show Resume";
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Kiran VVN</h1>
+    <p>Industrial Automation | Cloud Solutions | Consulting | Trainings</p>
+    <nav>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container section" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>Industrial Automation Simulator</h3>
+        <p>A robust PLC simulator that supports multiple protocols, provides real-time network analysis, and suggests optimization strategies for industrial automation networks.</p>
+        <a href="https://github.com/kvvn1975/KiransWork/tree/main/IndustrialAutomation/NetWorkAnalyzer" target="https://github.com/kvvn1975/KiransWork/tree/main/IndustrialAutomation/NetWorkAnalyzer">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Cloud Deployment Analyzer</h3>
+        <p>An advanced cloud analyzer that evaluates live deployments, visualizes network maps, and offers actionable insights and performance improvements.</p>
+        <a href="https://github.com/kvvn1975/KiransWork/tree/main/CloudDeploymentAnalyzer/CloudDeploymentAnalyzer" target="https://github.com/kvvn1975/KiransWork/tree/main/CloudDeploymentAnalyzer/CloudDeploymentAnalyzer">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>PLC Network Optimizer</h3>
+        <p>A tool that simulates various industrial protocols, tests network performance, and provides detailed recommendations for optimal configuration.</p>
+        <a href="https://github.com/kvvn1975/KiransWork/tree/main/IndustrialAutomation/NetWorkAnalyzer" target="https://github.com/kvvn1975/KiransWork/tree/main/IndustrialAutomation/NetWorkAnalyzer">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <h3>Biomechanics Simulator</h3>
+        <p>A 3D biomechanics simulation tool for sports analysis, featuring a wire-mesh biped and interactive camera views.</p>
+        <a href="https://github.com/kvvn1975/KiransWork/tree/main/BioMechanics" target="https://github.com/kvvn1975/KiransWork/tree/main/BioMechanics">View on GitHub</a>
+      </div>
+      <!-- Add additional project cards as needed -->
+    <div class="project-card">
+        <h3>Enterprise Security System</h3>
+        <p>An enterprise security system with modules for Logging Agent, Centralized Log Store, AI Analysis, Rule Engine, Notification Service, Reporting Service, Analytics & Visualization, and an Admin UI</p>
+        <a href="https://github.com/kvvn1975/KiransWork/tree/main/BioMechanics" target="https://github.com/kvvn1975/KiransWork/tree/main/BioMechanics">View on GitHub</a>
+      </div>
+    
+  </div>
+  </div>
+
+  <div class="container section" id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a seasoned consultant with over 20 years of experience in industrial automation, cloud solutions, and enterprise training. My work spans across Fortune 500 companies and involves delivering innovative, scalable, and cost-effective solutions. I love solving complex problems and sharing my knowledge through training and consulting.
+    </p>
+    <div class="toggle-btn" id="toggleResumeBtn" onclick="toggleResume()">Show Resume</div>
+    <div class="resume-card" id="resumeContent">
+      <!-- You can embed your resume content here; for example, text or an iframe with your resume PDF. -->
+      <h3>Resume</h3>
+      <p>
+        [Insert your resume text or embed a PDF viewer here.]<br>
+        Example: <a href="https://yourdomain.com/yourresume.pdf" target="_blank">Download PDF version</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="container section" id="contact">
+    <h2>Contact</h2>
+    <p>
+      Get in touch: <a href="mailto:kvvn@me.com">kvvn@me.com</a><br>
+      <a href="https://www.linkedin.com/in/kiranvvn/" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/kvvn1975" target="_blank">GitHub</a>
+    </p>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Kiran VVN. All rights reserved.</p>
+  </footer>
+</body>
+</html>
